@@ -63,7 +63,7 @@ function uno() {
 	]).then(function(response) {
 		if ( response.style == 'Front/back' )
 			basic();
-		else cloze();
+		else clozeGo();
 	});
 }
 
@@ -83,7 +83,7 @@ function createBasic() {
 	});
 }
 
-function cloze() {
+function clozeGo() {
 	inquirer.prompt([
 		{
 			type: 'list',
@@ -108,9 +108,17 @@ function createCloze() {
 			name: 'cloze',
 			message: 'What would you like removed from the text statement?'
 		}
-	]).then(function(clozeCard) {
-		clozeCards.push(clozeCard);
-		cloze();
+	]).then(function(answers) {
+        var text = answers.text;
+        var cloze = answers.cloze;
+        if (text.includes(cloze)) {
+            var newCloze = new clozeCard(text, cloze);
+            clozeCards.push(newCloze);
+            clozeGo();
+        } else {
+            console.log('The cloze portion you provided is not found in the full text. Please try again.');
+            createCloze();
+        }
 	});
 }
 
