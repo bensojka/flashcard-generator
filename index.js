@@ -1,5 +1,7 @@
 var basicCard = require('./basicCard');
-var clozeCard = require('./clozeCard')
+
+var clozeCard = require('./clozeCard');
+
 var inquirer = require('inquirer');
 
 var uncaught = require('uncaught');
