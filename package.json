@@ -1,7 +1,7 @@
 {
   "name": "01_session",
   "version": "1.0.0",
-  "description": "",
+  "description": "9/9/17",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +12,14 @@
   "dependencies": {
     "inquirer": "^3.2.3",
     "uncaught": "0.0.5"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bensojka/flashcard-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bensojka/flashcard-generator/issues"
+  },
+  "homepage": "https://github.com/bensojka/flashcard-generator#readme"
 }
